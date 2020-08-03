@@ -9,6 +9,9 @@ import { LoginComponent } from './login/login.component';
 import { AccountAppComponent } from './account.app.component';
 
 import { AccountRoutingModule } from './account.route';
+import { AccountService } from './services/account.service';
+
+import { CustomFormsModule } from 'ngx-custom-validators';
 
 
 @NgModule({
@@ -23,7 +26,11 @@ import { AccountRoutingModule } from './account.route';
     AccountRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CustomFormsModule
+  ],
+  providers: [
+    AccountService
   ]
 })
 export class AccountModule { }
