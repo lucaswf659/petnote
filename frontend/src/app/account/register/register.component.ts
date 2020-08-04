@@ -40,7 +40,7 @@ export class RegisterComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
 
-    // let password = new FormControl('', [Validators.required, CustomValidators.rangeLength([6, 15])]);
+    let password = new FormControl('', [Validators.required, CustomValidators.rangeLength([6, 15])]);
 
     this.registerForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
