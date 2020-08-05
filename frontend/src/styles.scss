@@ -1,3 +1,9 @@
+$light-purple: #B178FF; 
+$dark-purple: #6A75D9;
+$light-blue: #81C5F0;
+$water-green: #6AD9CA;
+$light-green: #91FAB2;
+
 .footer {
     position: absolute;
     bottom: 0;
@@ -8,5 +14,39 @@
     line-height: 60px;
     /* Vertically center the text there */
 }
+
+.home-panel {
+    background-color: $light-purple !important;
+}
+
+.middle-bar {
+    margin-top: 200px; 
+    height: 300px; 
+    background-color: $light-blue; 
+    color: transparent
+}
+
+.register-form {
+    padding-top: 195px;
+}
+
+.btn-primary{
+    background-color: $water-green !important;
+    border: none !important;
+}
+
+.btn-primary:hover {
+    background-color: $light-green !important;
+}
+
+.btn-success {
+    background-color: $dark-purple !important;
+    border: none !important;
+}
+
+.btn-success:hover {
+    background-color: $light-purple !important;
+}
+
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
