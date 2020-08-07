@@ -6,6 +6,6 @@ export interface AddAccountModel {
     password: string
 }
 
-export interface AddACcount {
+export interface AddAccount { 
     add(account: AddAccountModel): AccountModel
 }
