@@ -2,14 +2,9 @@
 // https://jestjs.io/docs/en/configuration.html
 
 module.exports = {
-  collectCoverageFrom: [
-    '<rootDir>/src/**/*.ts',
-    '!<rootDir>/src/**/*-protocols.ts',
-    '!**/protocols/**'
-  ],
+  roots: ['<rootDir>/src'],
+  collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
   coverageDirectory: 'coverage',
-  // coverageProvider: 'v8',
-  testEnvironment: 'node',
   preset: '@shelf/jest-mongodb',
   transform: {
     '.+\\.ts$': 'ts-jest'
