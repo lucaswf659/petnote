@@ -1,6 +1,4 @@
 import { MongoClient, Collection } from 'mongodb'
-import { AccountModel } from '../../../../domain/models/account'
-
 
 export const MongoHelper = { 
     client: null as MongoClient,
