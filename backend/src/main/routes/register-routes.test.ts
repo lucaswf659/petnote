@@ -8,8 +8,8 @@ describe('Register Routes', () => {
             .send({
                 name: 'Lucas',
                 email: 'lucaswf659@gmail.com',
-                password: '123',
-                passwordConfirmation: '123'
+                password: '123456',
+                passwordConfirmation: '123456'
             })
             .expect(200)
     })

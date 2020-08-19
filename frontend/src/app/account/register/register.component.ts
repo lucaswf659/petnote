@@ -29,6 +29,9 @@ export class RegisterComponent implements OnInit, AfterViewInit {
               private router: Router) {
   
       this.validationMessages = {
+        name: {
+          required: 'Informe seu nome'
+        },
         email: {
           required: 'Informe o e-mail',
           email: 'E-mail inválido'
@@ -37,7 +40,7 @@ export class RegisterComponent implements OnInit, AfterViewInit {
           required: 'Informe a senha',
           rangeLength: 'A senha deve possuir entre 6 e 15 caracteres'
         },
-        confirmPassword:{
+        passwordConfirmation:{
           required: 'Informe a senha novamente',
           rangeLength: 'A senha deve possuir entre 6 e 15 caracteres',
           equalTo: 'As senhas não conferem'
@@ -53,10 +56,10 @@ export class RegisterComponent implements OnInit, AfterViewInit {
     let senhaConfirm = new FormControl('', [Validators.required, CustomValidators.rangeLength([6,15]), CustomValidators.equalTo(senha)])
 
     this.registerForm = this.fb.group({
+      name: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       password: senha,
-      confirmPassword: senhaConfirm,
-      profile: ['']
+      passwordConfirmation: senhaConfirm
     });
   }
 

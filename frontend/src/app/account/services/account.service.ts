@@ -15,7 +15,7 @@ export class AccountService extends BaseService {
     registerUser(user: User) : Observable<User>{
         
         let response = this.http
-            .post(this.UrlServiceV1 + 'new-account', user, this.getHeaderJson())
+            .post(this.UrlServiceV1 + 'register', user, this.getHeaderJson())
             .pipe(
                 map(this.extractData),
                 catchError(this.serviceError));

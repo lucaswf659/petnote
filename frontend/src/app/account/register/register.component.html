@@ -15,6 +15,17 @@
                     <li *ngFor="let error of errors">{{ error }}</li>
                 </ul>
             </div>
+
+            <div class="form-group">
+                <label class="col-md-3 control-label">Nome</label>
+                <div class="col-md-10">
+                    <input class="form-control" id="name" type="name" placeholder="Nome (requerido)" formControlName="name"
+                        [ngClass]="{'is-invalid': displayMessage.name }" />
+                    <span class="text-danger" *ngIf="displayMessage.name">
+                        <p [innerHTML]="displayMessage.name"></p>
+                    </span>
+                </div>
+            </div>
     
             <div class="form-group">
                 <label class="col-md-3 control-label">E-mail</label>
@@ -39,9 +50,9 @@
             <div class="form-group">
                 <label class="col-md-6 control-label">Confirme a Senha</label>
                 <div class="col-md-10">
-                    <input class="form-control" id="confirmPassword" type="password" placeholder="Confirme a Senha (requerido)" formControlName="confirmPassword" [ngClass]="{'is-invalid': displayMessage.confirmPassword }" />
-                    <span class="text-danger" *ngIf="displayMessage.confirmPassword">
-                                    <p [innerHTML]="displayMessage.confirmPassword"></p>
+                    <input class="form-control" id="passwordConfirmation" type="password" placeholder="Confirme a Senha (requerido)" formControlName="passwordConfirmation" [ngClass]="{'is-invalid': displayMessage.passwordConfirmation }" />
+                    <span class="text-danger" *ngIf="displayMessage.passwordConfirmation">
+                                    <p [innerHTML]="displayMessage.passwordConfirmation"></p>
                                 </span>
                 </div>
             </div>
